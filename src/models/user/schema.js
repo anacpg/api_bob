@@ -8,7 +8,7 @@ module.exports = new Schema({
   name: STRING(),
   surname: STRING(),
   bags: NUMBER(),
-  state: STRING({ default: C.USER_STATES.ACTIVE, enum: Object.keys(C.USER_STATES), null: true }),
+  state: STRING({ default: C.USER_STATES.ACTIVE, enum: Object.values(C.USER_STATES), null: true }),
   username: STRING({ unique: true }),
   email: STRING({ unique: true, match: REGEXPS.EMAIL }),
   password: STRING(),
