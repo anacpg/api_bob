@@ -2,6 +2,7 @@ import { ERRORS } from '../../common';
 import add from './add';
 import fetch from './fetch';
 import list from './list';
+import update from './update';
 
 const NOT_IMPLEMENTED = () => ERRORS.NOT_IMPLEMENTED;
 
@@ -12,7 +13,7 @@ export default {
   },
   '/user/:id': {
     get: fetch,
-    put: NOT_IMPLEMENTED,
+    put: update,
     delete: NOT_IMPLEMENTED,
   },
 };
