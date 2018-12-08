@@ -1,4 +1,13 @@
 {
+  "CODE": {
+    "CREATED": 201,
+    "ERROR": 500,
+    "NOT_ALLOWED": 403,
+    "NOT_FOUND": 404,
+    "SUCCESS": 200,
+    "SUCCESS_EMPTY": 204,
+    "WRONG_REQUEST": 400
+  },
   "USER_STATES": {
     "ACTIVE": "active",
     "INACTIVE": "inactive"

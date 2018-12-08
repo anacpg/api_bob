@@ -1,0 +1,10 @@
+{
+  "EXPIRED_TOKEN": { "code": 401, "message": "Expired token"},
+  "WRONG_DATA": { "code": 422, "message": "Wrong data" },
+  "NOT_ALLOWED": { "code": 403, "message": "Operation not allowed" },
+  "WRONG_CREDENTIALS": { "code": 403, "message": "Wrong credentials" },
+  "NOT_FOUND": { "code": 404, "message": "Resource not found" },
+  
+  "INTERNAL_SERVER_ERROR": { "code": 500, "message": "Internal server error. Try again later." },
+  "NOT_IMPLEMENTED": { "code": 501, "message": "Not implemented yet" }
+}

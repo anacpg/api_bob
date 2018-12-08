@@ -1,6 +1,6 @@
 import express from 'express';
 import { LogProvider } from './providers';
-// import routes from './routes';
+import routes from './routes';
 
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -19,11 +19,10 @@ app.use((req, res, next) => {
     res.end();
   }
   next();
-  
 });
 
 app.listen(APP_PORT, () => {
   LogProvider.info(`App listening on port ${APP_PORT}`); // eslint-disable-line no-console
 });
 
-// app.use('/', routes);
+app.use('/', routes);
