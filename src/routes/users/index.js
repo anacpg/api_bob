@@ -1,4 +1,5 @@
 import { ERRORS } from '../../common';
+import add from './add';
 import fetch from './fetch';
 import list from './list';
 
@@ -6,7 +7,7 @@ const NOT_IMPLEMENTED = () => ERRORS.NOT_IMPLEMENTED;
 
 export default {
   '/users': {
-    post: NOT_IMPLEMENTED,
+    post: add,
     get: list,
   },
   '/user/:id': {
