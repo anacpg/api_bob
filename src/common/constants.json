@@ -2,5 +2,7 @@
   "USER_STATES": {
     "ACTIVE": "active",
     "INACTIVE": "inactive"
-  }
+  },
+  "SUCCESS": 0,
+  "FAILURE": 1
 }
