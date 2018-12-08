@@ -6,7 +6,13 @@
   "scripts": {
     "start": "babel-node src/index.js es2015",
     "dev": "nodemon --watch src/ --exec babel-node src/index.js es2015",
-    "init:seed": "babel-node seed es2015"
+    "init:seed": "babel-node seed es2015",
+    "lint:js": "eslint --ignore-path .gitignore . --quiet",
+    "lint:ejs": "ejslint src/common/templates/*.ejs",
+    "lint": "npm run lint:js && npm run lint:ejs",
+    "test:unit": "env TEST_SUITE=UNIT TESTING=true mocha test",
+    "test:end2end": "bash test/end_to_end/run.sh",
+    "test": "npm run lint && npm run test:unit && bash test/end_to_end/run.sh"
   },
   "repository": {
     "type": "git",
@@ -20,8 +26,10 @@
   "homepage": "https://github.com/anacpg/api_bob#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
     "eslint-config-mediasmart": "^1.0.2",
     "express": "^4.16.4",
+    "mocha": "^5.2.0",
     "mongoose": "^5.3.13",
     "request": "^2.88.0",
     "winston": "^2.4.0"
