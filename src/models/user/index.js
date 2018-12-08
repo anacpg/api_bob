@@ -1,3 +1,7 @@
 import schema from './schema';
+import middleware from './middleware';
 
-export default mongoose => mongoose.model('User', schema);
+export default (mongoose) => {
+  middleware(schema);
+  return mongoose.model('User', schema);
+};
